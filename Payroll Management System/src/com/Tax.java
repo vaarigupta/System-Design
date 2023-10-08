@@ -62,9 +62,5 @@ public class Tax implements  TaxInterface{
         }
     }
 
-    public void printTax()
-    {
-        System.out.println(emp.getId() + " : Salary :- " + emp.getSalary()+ " | Tax :- " + tax);
-    }
 }
 

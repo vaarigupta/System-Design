@@ -15,16 +15,12 @@ public class Company {
         this.employeeList = employeeList;
     }
 
-    public void printEmployeeDetails()
+    public void GetAllEmployeeDetails()
     {
         for(Employee emp : employeeList)
         {
-
-            System.out.println("Emp Id : " + emp.getId());
-            System.out.println("Emp Name : " +emp.getName());
-            System.out.println("Emp Type : "+ emp.getEmpType());
-            System.out.println("Salary : " +emp.getSalary());
-            System.out.println();
+            PrintEmployeeDetails printEmployeeDetails = new PrintEmployeeDetails(emp);
+            printEmployeeDetails.print();
         }
     }
 }
