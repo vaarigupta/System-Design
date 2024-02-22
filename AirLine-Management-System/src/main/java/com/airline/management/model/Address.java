@@ -5,8 +5,16 @@ public class Address {
     private String state;
     private String city;
     private int pincode;
-    private String landmark;
     private String mainAddress;
+    private String Country;
+
+    public String getCountry() {
+        return Country;
+    }
+
+    public void setCountry(String country) {
+        Country = country;
+    }
 
     public String getState() {
         return state;
@@ -32,13 +40,6 @@ public class Address {
         this.pincode = pincode;
     }
 
-    public String getLandmark() {
-        return landmark;
-    }
-
-    public void setLandmark(String landmark) {
-        this.landmark = landmark;
-    }
 
     public String getMainAddress() {
         return mainAddress;
