@@ -20,6 +20,15 @@ public class BookMyShow {
         //bookMyShowData = new BookMyShowData();
     }
 
+    public static void main(String[] args) {
+
+        BookMyShow bookMyShow = new BookMyShow();
+        bookMyShow.Initialize();
+
+        bookMyShow.CreateBooking(City.DELHI, "3 Idiots");
+
+    }
+
     public void Initialize()
     {
         CreateMovie();
@@ -39,7 +48,9 @@ public class BookMyShow {
         Map<Theatre, List<MovieShow>>  theatresInACity = theatreController.GetAllShow(city,interestedMovie);
 
         for (Map.Entry<Theatre, List<MovieShow>> entry : theatresInACity.entrySet()) {
-            System.out.println("Key: " + entry.getKey() + ", Value: " );
+            System.out.println("Key: ");
+            entry.getKey().printTheatre();
+            System.out.println("Value : ");
 
             for(MovieShow show : entry.getValue())
             {
@@ -57,7 +68,7 @@ public class BookMyShow {
         int selectedSeatID2 = 32;
 
         List<Integer> alreadyBookSeats = interestedShow.getBookedSeats();
-        if(!alreadyBookSeats.contains(selectedSeatID1))
+        if(!alreadyBookSeats.contains(selectedSeatID1) && !alreadyBookSeats.contains(selectedSeatID2))
         {
             alreadyBookSeats.add(selectedSeatID1);
             alreadyBookSeats.add(selectedSeatID2);
@@ -132,7 +143,7 @@ public class BookMyShow {
 
 
         Theatre theatre2 = new Theatre(2,"PVR",City.NOIDA);
-        theatre1.setScreenList(CreateScreens());
+        theatre2.setScreenList(CreateScreens());
 
         List<MovieShow> movieShowList2 = new ArrayList<MovieShow>();
         MovieShow movieShow3 = new MovieShow(1,
@@ -147,7 +158,7 @@ public class BookMyShow {
 
         movieShowList2.add(movieShow3);
         movieShowList2.add(movieShow4);
-        theatre1.setMovieShowList(movieShowList2);
+        theatre2.setMovieShowList(movieShowList2);
 
         theatreController.AddTheatreInACity(City.DELHI,theatre1);
         theatreController.AddTheatreInACity(City.DELHI,theatre2);
@@ -189,12 +200,5 @@ public class BookMyShow {
 
 
 
-    public static void main(String[] args) {
 
-        BookMyShow bookMyShow = new BookMyShow();
-        bookMyShow.Initialize();
-
-        bookMyShow.CreateBooking(City.DELHI, "3 Idiots");
-
-    }
 }

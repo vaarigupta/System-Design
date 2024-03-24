@@ -1,6 +1,7 @@
 package com.bookmyshow;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MovieShow {
@@ -16,6 +17,7 @@ public class MovieShow {
         this.movie = movie;
         this.screen = screen;
         this.movieStartTime = movieStartTime;
+        bookedSeats = new ArrayList<>();
     }
 
     public int getShowID() {

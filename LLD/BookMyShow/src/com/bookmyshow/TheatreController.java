@@ -29,7 +29,11 @@ public class TheatreController {
 */
     public void AddTheatreInACity(City city, Theatre theatre)
     {
-        theatreList.add(theatre);
+        if(!theatreList.contains(theatre))
+        {
+            theatreList.add(theatre);
+        }
+
         if(theatresInACity.containsKey(city))
         {
             theatresInACity.get(city).add(theatre);

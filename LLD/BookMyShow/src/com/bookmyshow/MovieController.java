@@ -40,7 +40,10 @@ public class MovieController {
 
     public void AddMovieInCity(Movie movie,City city)
     {
-        movieList.add(movie);
+        if(!movieList.contains(movie))
+        {
+            movieList.add(movie);
+        }
        if(moviesInACity.containsKey(city))
        {
            moviesInACity.get(city).add(movie);
