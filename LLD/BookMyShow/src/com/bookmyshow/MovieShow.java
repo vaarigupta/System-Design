@@ -62,6 +62,6 @@ public class MovieShow {
 
     public void printMovieShow()
     {
-        System.out.println(showID + " " + movie.getMovieName() + " " + screen.getScreenID());
+        System.out.println( movie.getMovieName() + ", Screen ID: " + screen.getScreenID());
     }
 }

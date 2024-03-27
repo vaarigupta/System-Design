@@ -37,6 +37,6 @@ public class Movie {
 
     public void printMovie()
     {
-        System.out.println(movieID + ":  " + movieName + " " + duration);
+        System.out.println( movieName + " " + duration);
     }
 }

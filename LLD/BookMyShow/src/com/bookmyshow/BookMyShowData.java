@@ -58,23 +58,23 @@ public class BookMyShowData {
 
 
 
-        Theatre theatre2 = new Theatre(2,"PVR",City.NOIDA);
-        theatre1.setScreenList(CreateScreens());
+        Theatre theatre2 = new Theatre(2,"Cinepolis",City.NOIDA);
+        theatre2.setScreenList(CreateScreens());
 
         List<MovieShow> movieShowList2 = new ArrayList<MovieShow>();
         MovieShow movieShow3 = new MovieShow(1,
                 movie1,
-                theatre1.getScreenList().get(0),
+                theatre2.getScreenList().get(0),
                 LocalDateTime.of(2024, 3, 20, 12, 5));
 
         MovieShow movieShow4 = new MovieShow(2,
                 movie2,
-                theatre1.getScreenList().get(1),
+                theatre2.getScreenList().get(1),
                 LocalDateTime.of(2024, 3, 20, 16, 10));
 
         movieShowList2.add(movieShow3);
         movieShowList2.add(movieShow4);
-        theatre1.setMovieShowList(movieShowList2);
+        theatre2.setMovieShowList(movieShowList2);
 
         theatreController.AddTheatreInACity(City.DELHI,theatre1);
         theatreController.AddTheatreInACity(City.DELHI,theatre2);

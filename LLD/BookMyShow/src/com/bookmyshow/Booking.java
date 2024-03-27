@@ -38,4 +38,16 @@ public class Booking {
     public void setPayment(Payment payment) {
         this.payment = payment;
     }
+
+    public void printBookingDetails()
+    {
+        System.out.println("Booking Details are as follows: ");
+        show.printMovieShow();
+        for(Seat seat : bookedSeats)
+        {
+            System.out.println(seat.getSeatID() + ": " + seat.getSeatCategory());
+
+        }
+
+    }
 }

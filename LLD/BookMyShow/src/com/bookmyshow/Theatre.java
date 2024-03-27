@@ -58,6 +58,6 @@ public class Theatre {
 
     public void printTheatre()
     {
-        System.out.println(theatreID + " " + theatreName + " " + city);
+        System.out.println(theatreName + ", " + city);
     }
 }
