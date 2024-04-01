@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="317ad056-52e1-409f-a687-749b638392e0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ParkingLot/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/CostComputationClass/CostComputation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/EntranceGate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/Enum/Brand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/Enum/VehicleType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ExitGate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingSpotClass/FourWheelerParkingSpot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingSpotClass/ParkingSpot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingSpotClass/ParkingSpotFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingSpotClass/TwoWheelerParkingSpot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingSpotManagerClass/FourWheelerParkingSpotManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingSpotManagerClass/ParkingSpotManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingSpotManagerClass/ParkingSpotManagerFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingSpotManagerClass/TwoWheelerParkingSpotManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingStrategyClass/DefaultParkingStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingStrategyClass/NearToElevatorStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingStrategyClass/NearToEntranceGateStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingStrategyClass/NearToExitGateStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingStrategyClass/ParkingStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/PricingStrategyClass/HourlyPricingStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/PricingStrategyClass/PricingStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/Ticket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/VehicleClass/FourWheelerVehicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/VehicleClass/TwoWheelerVehicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/VehicleClass/Vehicle.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2ePKGHpd014uU0a8zMEVzeH4WRv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="317ad056-52e1-409f-a687-749b638392e0" name="Changes" comment="" />
+      <created>1711800675400</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711800675400</updated>
+    </task>
+    <servers />
+  </component>
+</project>
