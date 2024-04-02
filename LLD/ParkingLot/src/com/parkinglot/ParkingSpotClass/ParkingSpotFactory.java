@@ -1,5 +1,4 @@
 package com.parkinglot.ParkingSpotClass;
-
 import com.parkinglot.Enum.VehicleType;
 
 public class ParkingSpotFactory {

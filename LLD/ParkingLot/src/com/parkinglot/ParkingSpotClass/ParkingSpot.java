@@ -77,13 +77,7 @@ public class ParkingSpot {
         this.vehicleType = p.getVehicleType();
     }
 
-    public void ParkVehicle()
-    {
-
-    }
-    public  void RemoveVehicle()
-    {
-
-    }
+    public void ParkVehicle() {}
+    public  void RemoveVehicle() {}
 
 }

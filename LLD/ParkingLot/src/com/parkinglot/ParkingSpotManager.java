@@ -3,34 +3,28 @@ package com.parkinglot;
 import com.parkinglot.Enum.Brand;
 import com.parkinglot.Enum.Color;
 import com.parkinglot.Enum.VehicleType;
-import com.parkinglot.ParkingSpotClass.FourWheelerParkingSpot;
 import com.parkinglot.ParkingSpotClass.ParkingSpot;
 import com.parkinglot.ParkingSpotClass.ParkingSpotFactory;
-import com.parkinglot.ParkingSpotClass.TwoWheelerParkingSpot;
-import com.parkinglot.VehicleClass.FourWheelerVehicle;
-import com.parkinglot.VehicleClass.TwoWheelerVehicle;
 import com.parkinglot.VehicleClass.Vehicle;
 import com.parkinglot.VehicleClass.VehicleFactory;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ParkingLotData {
+public class ParkingSpotManager {
 
     List<ParkingSpot> parkingSpotList;
     List<Vehicle> vehicleList;
     VehicleFactory vehicleFactory;
     ParkingSpotFactory parkingSpotFactory;
-    public ParkingLotData()
+
+    public ParkingSpotManager()
     {
-        //parkingSpotFactory = new ParkingSpotFactory();
-        //vehicleFactory = new VehicleFactory();
         parkingSpotList = new ArrayList<>();
         vehicleList = new ArrayList<>();
     }
     public  List<ParkingSpot> CreateParkingSpot()
     {
-        //parkingSpotFactory.GetParkingSpot(VehicleType.TWO_WHEELER,i);
         for(int i=1;i<=5;i++)
         {
             parkingSpotList.add( parkingSpotFactory.GetParkingSpot(VehicleType.TWO_WHEELER,i));
@@ -69,18 +63,6 @@ public class ParkingLotData {
     }
 
 
-/*    public List<ParkingSpot> GetParkingSpotBasedOnVehicleType(VehicleType vehicleType)
-    {
-        List<ParkingSpot> parkingSpots = new ArrayList<>();
-        for(ParkingSpot p : parkingSpotList)
-        {
-            if(vehicleType.equals(p.getVehicleType()))
-                parkingSpots.add(p);
-        }
-        return  parkingSpots;
-    }*/
-
-
     public void UpdateParkingSpot(ParkingSpot spot)
     {
         for(int i=0;i<parkingSpotList.size();i++)
@@ -90,7 +72,6 @@ public class ParkingLotData {
                 parkingSpotList.get(i).UpdateParkingSpot(spot);
             }
         }
-       // return parkingSpots;
     }
 
     public void PrintParkingSpotList()

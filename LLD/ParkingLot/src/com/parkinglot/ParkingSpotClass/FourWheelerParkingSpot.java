@@ -1,7 +1,5 @@
 package com.parkinglot.ParkingSpotClass;
-
 import com.parkinglot.Enum.VehicleType;
-import com.parkinglot.ParkingSpotClass.ParkingSpot;
 
 public class FourWheelerParkingSpot extends ParkingSpot {
     public FourWheelerParkingSpot(int parkingSpotID) {

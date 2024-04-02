@@ -5,14 +5,10 @@ import com.parkinglot.Ticket;
 
 public class PricingStrategy {
 
-   // VehicleType vehicleType;
     float parkingFees;
-   // Ticket ticket;
-
     public PricingStrategy()
     {
         parkingFees = 20;
-
     }
 
     public float CalculateParkingFees(Ticket ticket)
