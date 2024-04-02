@@ -61,13 +61,6 @@ public class ParkingSpot {
         this.price = price;
     }
 
-    public void PrintParkingSpot()
-    {
-        System.out.print("Parking spot : ");
-        System.out.println( "ID : " + parkingSpotID + ", Availability: " + isEmpty );
-        System.out.print("Parked ");
-        vehicle.PrintVehicle();
-    }
 
     public void UpdateParkingSpot(ParkingSpot p)
     {
@@ -76,8 +69,5 @@ public class ParkingSpot {
         this.vehicle = p.getVehicle();
         this.vehicleType = p.getVehicleType();
     }
-
-    public void ParkVehicle() {}
-    public  void RemoveVehicle() {}
 
 }

@@ -2,6 +2,7 @@ package com.parkinglot;
 
 import com.parkinglot.ParkingSpotClass.ParkingSpot;
 import com.parkinglot.ParkingStrategyClass.NearToEntranceGateStrategy;
+import com.parkinglot.PrintClass.PrintFactory;
 import com.parkinglot.VehicleClass.Vehicle;
 
 import java.util.List;
@@ -12,7 +13,6 @@ public class ParkingLot {
     ParkingSpotManager parkingSpotManager = new ParkingSpotManager();
     List<ParkingSpot> parkingSpotList;
     List<Vehicle> vehicleList;
-
     public ParkingLot()
     {
         parkingSpotList= parkingSpotManager.CreateParkingSpot();
@@ -30,15 +30,20 @@ public class ParkingLot {
 
     public Ticket VehicleIn( EntranceGate entranceGate,Vehicle vehicle)
     {
+
         System.out.print("Entered ");
-        vehicle.PrintVehicle();
+        PrintFactory.GetPrintObject(vehicle).Print();
+
         //find the parking space at entrance gate
         ParkingSpot parkingSpot = entranceGate.FindParkingSpace(vehicle.getVehicleType());
+
         ///park the vehicle in parking spot and generate ticket
         entranceGate.AllocateParkingSpot(vehicle,parkingSpot);
-        parkingSpot.PrintParkingSpot();
+
+        PrintFactory.GetPrintObject(parkingSpot).Print();
         Ticket ticket = entranceGate.GenerateTicket(vehicle,parkingSpot);
-        ticket.PrintTicket();
+
+        PrintFactory.GetPrintObject(ticket).Print();
         System.out.println();
         return  ticket;
     }
@@ -73,7 +78,7 @@ public class ParkingLot {
         Ticket ticket1 =  parkingLot.VehicleIn(entranceGate,vehicle1);
         Ticket ticket2 =  parkingLot.VehicleIn(entranceGate,vehicle2);
         Ticket ticket5 = parkingLot.VehicleIn(entranceGate,vehicle5);
-        Ticket ticket3 = parkingLot.VehicleIn(entranceGate,vehicle3);
+      Ticket ticket3 = parkingLot.VehicleIn(entranceGate,vehicle3);
         Ticket ticket4 = parkingLot.VehicleIn(entranceGate,vehicle4);
 
         //1 Vehicle out from the exit gate

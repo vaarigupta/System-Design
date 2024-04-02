@@ -49,9 +49,4 @@ public class Vehicle {
         this.vehicleType = vehicleType;
     }
 
-    public void PrintVehicle()
-    {
-        System.out.print("Vehicle : ");
-        System.out.println(vehicleNo + " " + vehicleBrand + " " + vehicleType + " " + color);
-    }
 }

@@ -43,12 +43,4 @@ public class Ticket {
         this.parkingSpot = parkingSpot;
     }
 
-    public void PrintTicket()
-    {
-        System.out.print("Ticket : ");
-        System.out.println("ID : " + tickeID + ", Entry time : " + entryTime );
-        //vehicle.PrintVehicle();
-       // parkingSpot.PrintParkingSpot();
-    }
-
 }
