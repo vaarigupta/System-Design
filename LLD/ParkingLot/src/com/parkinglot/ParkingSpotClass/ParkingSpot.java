@@ -69,6 +69,13 @@ public class ParkingSpot {
         vehicle.PrintVehicle();
     }
 
+    public void UpdateParkingSpot(ParkingSpot p)
+    {
+        this.parkingSpotID = p.getParkingSpotID();
+        this.isEmpty = p.isEmpty();
+        this.vehicle = p.getVehicle();
+        this.vehicleType = p.getVehicleType();
+    }
 
     public void ParkVehicle()
     {

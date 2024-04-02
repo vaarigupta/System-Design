@@ -6,7 +6,9 @@ import com.parkinglot.Enum.VehicleType;
 
 public class TwoWheelerVehicle extends Vehicle {
 
-    public TwoWheelerVehicle(int vehicleNo, Brand vehicleBrand, VehicleType vehicleType, Color color) {
-        super(vehicleNo, vehicleBrand, vehicleType, color);
+    public TwoWheelerVehicle(int vehicleNo, Brand vehicleBrand, Color color) {
+        super(vehicleNo, vehicleBrand, color);
+
+        vehicleType = VehicleType.TWO_WHEELER;
     }
 }

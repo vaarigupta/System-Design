@@ -4,7 +4,7 @@ import com.parkinglot.Enum.VehicleType;
 
 public class ParkingSpotFactory {
 
-    public ParkingSpot GetParkingSpot(VehicleType vehicleType, int parkingSpotID)
+    public static ParkingSpot GetParkingSpot(VehicleType vehicleType, int parkingSpotID)
     {
         if(vehicleType.equals(VehicleType.TWO_WHEELER))
         {

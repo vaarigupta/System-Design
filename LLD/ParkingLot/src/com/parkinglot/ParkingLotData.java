@@ -5,10 +5,12 @@ import com.parkinglot.Enum.Color;
 import com.parkinglot.Enum.VehicleType;
 import com.parkinglot.ParkingSpotClass.FourWheelerParkingSpot;
 import com.parkinglot.ParkingSpotClass.ParkingSpot;
+import com.parkinglot.ParkingSpotClass.ParkingSpotFactory;
 import com.parkinglot.ParkingSpotClass.TwoWheelerParkingSpot;
 import com.parkinglot.VehicleClass.FourWheelerVehicle;
 import com.parkinglot.VehicleClass.TwoWheelerVehicle;
 import com.parkinglot.VehicleClass.Vehicle;
+import com.parkinglot.VehicleClass.VehicleFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,33 +19,57 @@ public class ParkingLotData {
 
     List<ParkingSpot> parkingSpotList;
     List<Vehicle> vehicleList;
-
+    VehicleFactory vehicleFactory;
+    ParkingSpotFactory parkingSpotFactory;
     public ParkingLotData()
     {
+        //parkingSpotFactory = new ParkingSpotFactory();
+        //vehicleFactory = new VehicleFactory();
         parkingSpotList = new ArrayList<>();
         vehicleList = new ArrayList<>();
     }
     public  List<ParkingSpot> CreateParkingSpot()
     {
+        //parkingSpotFactory.GetParkingSpot(VehicleType.TWO_WHEELER,i);
         for(int i=1;i<=5;i++)
         {
-            parkingSpotList.add(new TwoWheelerParkingSpot(i));
+            parkingSpotList.add( parkingSpotFactory.GetParkingSpot(VehicleType.TWO_WHEELER,i));
         }
 
         for(int i=6;i<=15;i++)
         {
-            parkingSpotList.add(new FourWheelerParkingSpot(i));
+            parkingSpotList.add( parkingSpotFactory.GetParkingSpot(VehicleType.FOUR_WHEELER,i));
         }
 
         for(int i=16;i<=20;i++)
         {
-            parkingSpotList.add(new TwoWheelerParkingSpot(i));
+            parkingSpotList.add( parkingSpotFactory.GetParkingSpot(VehicleType.TWO_WHEELER,i));
         }
 
         return  parkingSpotList;
     }
 
-    public List<ParkingSpot> GetParkingSpotBasedOnVehicleType(VehicleType vehicleType)
+    public List<Vehicle> CreateVehicle()
+    {
+
+        vehicleList.add(vehicleFactory.GetVehicle(123, Brand.HONDA, VehicleType.TWO_WHEELER, Color.BLACK));
+        vehicleList.add(vehicleFactory.GetVehicle(1456, Brand.HERO, VehicleType.TWO_WHEELER, Color.RED));
+        vehicleList.add(vehicleFactory.GetVehicle(113, Brand.ATHER, VehicleType.TWO_WHEELER, Color.GREY));
+        vehicleList.add(vehicleFactory.GetVehicle(173, Brand.BAJAJ, VehicleType.TWO_WHEELER, Color.WHITE));
+        vehicleList.add(vehicleFactory.GetVehicle(190, Brand.TVS, VehicleType.TWO_WHEELER, Color.BLUE));
+
+        vehicleList.add(vehicleFactory.GetVehicle(300, Brand.MARUTI_SUZUKI, VehicleType.FOUR_WHEELER, Color.BLACK));
+        vehicleList.add(vehicleFactory.GetVehicle(400, Brand.TATAMOTORS, VehicleType.FOUR_WHEELER, Color.BLUE));
+        vehicleList.add(vehicleFactory.GetVehicle(500, Brand.HYUNDAI, VehicleType.FOUR_WHEELER, Color.RED));
+        vehicleList.add(vehicleFactory.GetVehicle(600, Brand.BMW, VehicleType.FOUR_WHEELER, Color.GREY));
+        vehicleList.add(vehicleFactory.GetVehicle(700, Brand.MERCEDES, VehicleType.FOUR_WHEELER, Color.WHITE));
+
+        return vehicleList;
+
+    }
+
+
+/*    public List<ParkingSpot> GetParkingSpotBasedOnVehicleType(VehicleType vehicleType)
     {
         List<ParkingSpot> parkingSpots = new ArrayList<>();
         for(ParkingSpot p : parkingSpotList)
@@ -52,24 +78,19 @@ public class ParkingLotData {
                 parkingSpots.add(p);
         }
         return  parkingSpots;
-    }
-    public List<Vehicle> CreateVehicle()
+    }*/
+
+
+    public void UpdateParkingSpot(ParkingSpot spot)
     {
-
-        vehicleList.add(new TwoWheelerVehicle(123, Brand.HONDA, VehicleType.TWO_WHEELER, Color.BLACK));
-        vehicleList.add(new TwoWheelerVehicle(1456, Brand.HERO, VehicleType.TWO_WHEELER, Color.RED));
-        vehicleList.add(new TwoWheelerVehicle(113, Brand.ATHER, VehicleType.TWO_WHEELER, Color.GREY));
-        vehicleList.add(new TwoWheelerVehicle(173, Brand.BAJAJ, VehicleType.TWO_WHEELER, Color.WHITE));
-        vehicleList.add(new TwoWheelerVehicle(190, Brand.TVS, VehicleType.TWO_WHEELER, Color.BLUE));
-
-        vehicleList.add(new FourWheelerVehicle(300, Brand.MARUTI_SUZUKI, VehicleType.FOUR_WHEELER, Color.BLACK));
-        vehicleList.add(new FourWheelerVehicle(400, Brand.TATAMOTORS, VehicleType.FOUR_WHEELER, Color.BLUE));
-        vehicleList.add(new FourWheelerVehicle(500, Brand.HYUNDAI, VehicleType.FOUR_WHEELER, Color.RED));
-        vehicleList.add(new FourWheelerVehicle(600, Brand.BMW, VehicleType.FOUR_WHEELER, Color.GREY));
-        vehicleList.add(new FourWheelerVehicle(700, Brand.MERCEDES, VehicleType.FOUR_WHEELER, Color.WHITE));
-
-        return vehicleList;
-
+        for(int i=0;i<parkingSpotList.size();i++)
+        {
+            if(parkingSpotList.get(i).getParkingSpotID()== spot.getParkingSpotID())
+            {
+                parkingSpotList.get(i).UpdateParkingSpot(spot);
+            }
+        }
+       // return parkingSpots;
     }
 
     public void PrintParkingSpotList()

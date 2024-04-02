@@ -11,10 +11,9 @@ public class Vehicle {
     VehicleType vehicleType;
     Color color;
 
-    public Vehicle(int vehicleNo, Brand vehicleBrand, VehicleType vehicleType, Color color) {
+    public Vehicle(int vehicleNo, Brand vehicleBrand, Color color) {
         this.vehicleNo = vehicleNo;
         this.vehicleBrand = vehicleBrand;
-        this.vehicleType = vehicleType;
         this.color = color;
     }
 

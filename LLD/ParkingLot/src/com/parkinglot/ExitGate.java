@@ -12,41 +12,51 @@ import java.util.List;
 
 public class ExitGate {
 
-    Ticket ticket;
-    Vehicle vehicle;
-    PricingStrategy pricingStrategy;
+   // Ticket ticket;
+   // Vehicle vehicle;
     CostComputationFactory costComputationFactory;
     CostComputation costComputation;
-    ParkingSpotManagerFactory parkingSpotManagerFactory;
-    ParkingSpotManager parkingSpotManager;
+  //  ParkingSpotManagerFactory parkingSpotManagerFactory;
+   // ParkingSpotManager parkingSpotManager;
+    ParkingLotData parkingLotData;
     //payment object
+    List<ParkingSpot> parkingSpotList;
 
-    public ExitGate(Ticket ticket)
+    public ExitGate(List<ParkingSpot> parkingSpotList)
     {
-        this.ticket = ticket;
-        this.pricingStrategy = pricingStrategy;
-        this.vehicle = ticket.getVehicle();
+       // this.ticket = ticket;
+       /// this.vehicle = ticket.getVehicle();
         costComputationFactory = new CostComputationFactory();
-        parkingSpotManagerFactory = new ParkingSpotManagerFactory();
-        costComputation = costComputationFactory.GetCostComputationObject(this.vehicle.getVehicleType());
-        parkingSpotManager = parkingSpotManagerFactory.GetParkingSpotManager(this.vehicle.getVehicleType());
+
+        parkingLotData = new ParkingLotData();
+        this.parkingSpotList = parkingSpotList;
+      //  parkingSpotManagerFactory = new ParkingSpotManagerFactory();
+
+   //     parkingSpotManager = parkingSpotManagerFactory.GetParkingSpotManager(this.vehicle.getVehicleType());
     }
     //calculate Price from cost computation factory
-    public float CalculateParkingFees()
+    public float CalculateParkingFees(Ticket ticket)
     {
-       return costComputation.CalculateParkingFees(ticket);
+        costComputation = costComputationFactory.GetCostComputationObject(ticket.getVehicle().getVehicleType());
+        return costComputation.CalculateParkingFees(ticket);
     }
 
     //remove vehicle
-    public void FreeParkingSpace()
+    public void FreeParkingSpace(Ticket ticket)
     {
-        List<ParkingSpot> parkingSpotList = parkingSpotManager.getParkingSpots();
+      //  parkingLotData.UpdateParkingSpot();
+       // List<ParkingSpot> parkingSpotList = parkingLotData.CreateParkingSpot();
         for(ParkingSpot p : parkingSpotList)
         {
             if(p.getParkingSpotID() == ticket.getParkingSpot().getParkingSpotID())
             {
+                System.out.println("Freed up Parking Spot with ID : " +
+                        p.getParkingSpotID() + ",  now, " + p.getVehicle().getVehicleNo() +" " + p.getVehicle().getVehicleBrand()
+                        + " got exit");
                 p.setEmpty(true);
-                System.out.println("Freed up Parking Spot with ID : " + p.getParkingSpotID() + "now , vehicle got exit");
+                p.setVehicle(null);
+               // p.setVehicleType(null);
+
                 return;
             }
         }

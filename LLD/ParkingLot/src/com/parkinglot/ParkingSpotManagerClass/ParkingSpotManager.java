@@ -5,12 +5,12 @@ import com.parkinglot.ParkingLotData;
 import com.parkinglot.ParkingSpotClass.ParkingSpot;
 import com.parkinglot.ParkingStrategyClass.ParkingStrategy;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ParkingSpotManager {
 
     List<ParkingSpot> parkingSpots;
-  //  ParkingStrategy parkingStrategy;
     ParkingLotData parkingLotData;
     public  ParkingSpotManager()
     {
@@ -21,21 +21,13 @@ public class ParkingSpotManager {
         return parkingSpots;
     }
 
-    public List<ParkingSpot> getParkingSpotBasedOnVehicleType(VehicleType vehicleType)
+    public void  UpdateParkingSpot(ParkingSpot spot)
     {
-        return parkingLotData.GetParkingSpotBasedOnVehicleType(vehicleType);
+        parkingLotData.UpdateParkingSpot(spot);
     }
     public void setParkingSpots(List<ParkingSpot> parkingSpots) {
         this.parkingSpots = parkingSpots;
     }
-
-  /*  public ParkingStrategy getParkingStrategy() {
-        return parkingStrategy;
-    }
-
-    public void setParkingStrategy(ParkingStrategy parkingStrategy) {
-        this.parkingStrategy = parkingStrategy;
-    }*/
 
 
     void ParkVehicle(){}
