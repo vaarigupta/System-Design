@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="317ad056-52e1-409f-a687-749b638392e0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ParkingLot/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/CostComputationClass/CostComputation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/EntranceGate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/Enum/Brand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/Enum/VehicleType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ExitGate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingSpotClass/FourWheelerParkingSpot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingSpotClass/ParkingSpot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingSpotClass/ParkingSpotFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingSpotClass/TwoWheelerParkingSpot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingSpotManagerClass/FourWheelerParkingSpotManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingSpotManagerClass/ParkingSpotManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingSpotManagerClass/ParkingSpotManagerFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingSpotManagerClass/TwoWheelerParkingSpotManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingStrategyClass/DefaultParkingStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingStrategyClass/NearToElevatorStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingStrategyClass/NearToEntranceGateStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingStrategyClass/NearToExitGateStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/ParkingStrategyClass/ParkingStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/PricingStrategyClass/HourlyPricingStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/PricingStrategyClass/PricingStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/Ticket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/VehicleClass/FourWheelerVehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/VehicleClass/TwoWheelerVehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot/src/com/parkinglot/VehicleClass/Vehicle.java" afterDir="false" />
-    </list>
+    <list default="true" id="317ad056-52e1-409f-a687-749b638392e0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
