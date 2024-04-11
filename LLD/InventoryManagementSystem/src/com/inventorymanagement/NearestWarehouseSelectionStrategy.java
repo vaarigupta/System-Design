@@ -4,14 +4,14 @@ import java.util.List;
 
 public class NearestWarehouseSelectionStrategy implements  WarehouseSelectionStrategy {
 
-    List<Warehouse> warehouseList;
-    public  NearestWarehouseSelectionStrategy(List<Warehouse> warehouseList)
-    {
-        this.warehouseList = warehouseList;
-
-    }
     @Override
-    public Warehouse selectWarehouse(List<Warehouse> warehouseList) {
+    public Warehouse FindWarehouse(List<Warehouse> warehouseList, Address deliveryAddress) {
+
+        for(Warehouse warehouse : warehouseList)
+        {
+            if(warehouse.getWarehouseAddress().getPincode()== deliveryAddress.getPincode())
+                return warehouse;
+        }
         return warehouseList.get(0);
     }
 }

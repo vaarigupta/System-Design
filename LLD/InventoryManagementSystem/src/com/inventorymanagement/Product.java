@@ -8,6 +8,12 @@ public class Product {
     String productName;
     ProductCategory productCategory;
     Brand brand;
+    float price;
+
+    public Product(int productID)
+    {
+        this.productID = productID;
+    }
 
     public ProductCategory getProductCategory() {
         return productCategory;
@@ -41,4 +47,11 @@ public class Product {
         this.productName = productName;
     }
 
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
 }

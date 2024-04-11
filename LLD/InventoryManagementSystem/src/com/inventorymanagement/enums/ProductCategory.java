@@ -4,7 +4,7 @@ public enum ProductCategory {
 
     FRUITS_VEGETABLES,
     FOODGRAINS,
-    OIL,
+    OIL_GHEE,
     MASALA,
     BAKERY,
     DAIRY,

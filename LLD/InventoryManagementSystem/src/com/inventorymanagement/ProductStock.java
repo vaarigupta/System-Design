@@ -1,17 +1,56 @@
 package com.inventorymanagement;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProductStock {
 
     int stockID;
-    List<Product> products;
-    double price;
+    int productCount;
+    Product product;
 
-    void AddProduct(){}
+    public ProductStock(int stockID, Product product, int productCount)
+    {
+        this.stockID = stockID;
+        this.product = product;
+        this.productCount = productCount;
+    }
+    public int getStockID() {
+        return stockID;
+    }
 
-    void RemoveProduct(){}
+    public void setStockID(int stockID) {
+        this.stockID = stockID;
+    }
 
-    void GetProduct() {}
+    public int getProductCount() {
+        return productCount;
+    }
+
+    public void setProductCount(int productCount) {
+        this.productCount = productCount;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
+    public void AddProduct(int count){
+
+        productCount += count;
+    }
+
+    public void RemoveProduct(int count){
+
+        if(productCount-count>=0)
+        {
+            productCount =- count;
+        }
+    }
+
 
 }

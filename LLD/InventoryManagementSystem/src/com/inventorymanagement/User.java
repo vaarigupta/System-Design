@@ -9,6 +9,67 @@ public class User {
     List<Address> addresses;
     Cart cart;
     List<Integer> orderIDList;
+    Address selectedDeliveryAddress;
 
+    public  User(int userID)
+    {
+        this.userID = userID;
+    }
+    public User(int userID, String name)
+    {
+        this.userID = userID;
+        this.name = name;
+    }
 
+    public Address getSelectedDeliveryAddress() {
+        return selectedDeliveryAddress;
+    }
+
+    public void setSelectedDeliveryAddress(Address selectedDeliveryAddress) {
+        this.selectedDeliveryAddress = selectedDeliveryAddress;
+    }
+
+    public void AddAdress(Address address)
+    {
+        addresses.add(address);
+    }
+    public int getUserID() {
+        return userID;
+    }
+
+    public void setUserID(int userID) {
+        this.userID = userID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Address> getAddresses() {
+        return addresses;
+    }
+
+    public void setAddresses(List<Address> addresses) {
+        this.addresses = addresses;
+    }
+
+    public Cart getCart() {
+        return cart;
+    }
+
+    public void setCart(Cart cart) {
+        this.cart = cart;
+    }
+
+    public List<Integer> getOrderIDList() {
+        return orderIDList;
+    }
+
+    public void setOrderIDList(List<Integer> orderIDList) {
+        this.orderIDList = orderIDList;
+    }
 }
