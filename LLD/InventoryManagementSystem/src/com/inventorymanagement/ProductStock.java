@@ -46,9 +46,9 @@ public class ProductStock {
 
     public void RemoveProduct(int count){
 
-        if(productCount-count>=0)
+        if(count<=productCount)
         {
-            productCount =- count;
+            productCount = productCount - count;
         }
     }
 

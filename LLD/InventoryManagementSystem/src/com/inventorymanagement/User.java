@@ -1,5 +1,6 @@
 package com.inventorymanagement;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class User {
@@ -13,12 +14,14 @@ public class User {
 
     public  User(int userID)
     {
+        addresses = new ArrayList<Address>();
         this.userID = userID;
     }
     public User(int userID, String name)
     {
         this.userID = userID;
         this.name = name;
+        addresses = new ArrayList<Address>();
     }
 
     public Address getSelectedDeliveryAddress() {

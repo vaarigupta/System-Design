@@ -1,5 +1,6 @@
 package com.inventorymanagement;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class WarehouseController {
@@ -9,6 +10,7 @@ public class WarehouseController {
 
     public WarehouseController(WarehouseSelectionStrategy warehouseSelectionStrategy)
     {
+        warehouseList = new ArrayList<Warehouse>();
         this.warehouseSelectionStrategy = warehouseSelectionStrategy;
     }
     public List<Warehouse> getWarehouseList() {

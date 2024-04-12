@@ -9,51 +9,78 @@ import java.util.Map;
 
 public class InventoryManagement {
 
-/*
     UserController userController;
     WarehouseController warehouseController;
     InventoryManagementData inventoryManagementData;
+
     public InventoryManagement()
     {
-        inventoryManagementData = new InventoryManagementData(new UserController(), new WarehouseController());
+        warehouseController = new WarehouseController(new NearestWarehouseSelectionStrategy());
+        userController = new UserController();
+        inventoryManagementData = new InventoryManagementData(userController, warehouseController);
     }
-*/
 
+    public InventoryManagementData getInventoryManagementData() {
+        return inventoryManagementData;
+    }
+
+    public void setInventoryManagementData(InventoryManagementData inventoryManagementData) {
+        this.inventoryManagementData = inventoryManagementData;
+    }
+
+    public UserController getUserController() {
+        return userController;
+    }
+
+    public void setUserController(UserController userController) {
+        this.userController = userController;
+    }
+
+    public WarehouseController getWarehouseController() {
+        return warehouseController;
+    }
+
+    public void setWarehouseController(WarehouseController warehouseController) {
+        this.warehouseController = warehouseController;
+    }
 
     public static void main(String[] args) {
 
-        InventoryManagement inventoryManagement = new InventoryManagement();
-        WarehouseController warehouseController = new WarehouseController(new NearestWarehouseSelectionStrategy());
-        UserController userController = new UserController();
-        InventoryManagementData inventoryManagementData = new InventoryManagementData(userController, warehouseController);
-
+       InventoryManagement inventoryManagement = new InventoryManagement();
+       InventoryManagementData inventoryManagementData = inventoryManagement.getInventoryManagementData();
+       WarehouseController warehouseController = inventoryManagement.getWarehouseController();
+       UserController userController = inventoryManagement.getUserController();
 
         List<User> userList =  inventoryManagementData.CreateUser();
 
         List<Address> addressList = inventoryManagementData.CreateAddresses();
-        List<Product> productList = inventoryManagementData.CreateProduct();
 
-        Inventory inventory = inventoryManagementData.CreateInventory();
-
-        List<Warehouse> warehouseList = inventoryManagementData.CreateWarehouse();
+       warehouseController.setWarehouseList(inventoryManagementData.CreateWarehouse());
 
         User user = userList.get(0);
-        user.AddAdress(addressList.get(0));
+
+        //add delivery address
         user.setSelectedDeliveryAddress(addressList.get(0));
+
+        //get delivery address
+        Address deliveryAddress = user.getSelectedDeliveryAddress();
+        //add address to the user's address list
+        user.AddAdress(deliveryAddress);
+
         //add to cart
         Cart cart = new Cart();
-        cart.AddItemToCart(0,2);
-        cart.AddItemToCart(1,3);
+        cart.AddItemToCart(1,2);
+        cart.AddItemToCart(2,3);
 
+        //set cart to the user
         user.setCart(cart);
 
-        Address deliveryAddress = user.getSelectedDeliveryAddress();
         Warehouse warehouse = warehouseController.FindWareHouse(deliveryAddress);
 
         //place order
         Order order =  inventoryManagement.CreateOrder(user,deliveryAddress,warehouse,PaymentMode.CASH_ON_DELIVERY);
 
-
+        System.out.println("Finally 1 order fulfilled");
     }
 
     public Order CreateOrder(User user, Address deliveryAddress, Warehouse warehouse, PaymentMode paymentMode)
