@@ -1,4 +1,7 @@
-package com.inventorymanagement;
+package com.inventorymanagement.ordermanagement;
+
+import com.inventorymanagement.Address;
+import com.inventorymanagement.usermanagement.User;
 
 import java.util.Map;
 

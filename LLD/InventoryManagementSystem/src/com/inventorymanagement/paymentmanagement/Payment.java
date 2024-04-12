@@ -1,4 +1,4 @@
-package com.inventorymanagement;
+package com.inventorymanagement.paymentmanagement;
 
 import com.inventorymanagement.enums.PaymentMode;
 import com.inventorymanagement.enums.PaymentStatus;

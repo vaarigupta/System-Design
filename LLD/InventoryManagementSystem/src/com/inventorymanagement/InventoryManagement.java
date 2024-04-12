@@ -3,6 +3,18 @@ package com.inventorymanagement;
 import com.inventorymanagement.enums.OrderStatus;
 import com.inventorymanagement.enums.PaymentMode;
 import com.inventorymanagement.enums.PaymentStatus;
+import com.inventorymanagement.ordermanagement.Cart;
+import com.inventorymanagement.ordermanagement.Invoice;
+import com.inventorymanagement.ordermanagement.Order;
+import com.inventorymanagement.paymentmanagement.Payment;
+import com.inventorymanagement.paymentmanagement.PaymentFactory;
+import com.inventorymanagement.productmanagement.ProductStock;
+import com.inventorymanagement.usermanagement.User;
+import com.inventorymanagement.usermanagement.UserController;
+import com.inventorymanagement.warehousemanagement.Inventory;
+import com.inventorymanagement.warehousemanagement.NearestWarehouseSelectionStrategy;
+import com.inventorymanagement.warehousemanagement.Warehouse;
+import com.inventorymanagement.warehousemanagement.WarehouseController;
 
 import java.util.List;
 import java.util.Map;
@@ -88,7 +100,7 @@ public class InventoryManagement {
         Order order = new Order(user,deliveryAddress,warehouse);
         order.setOrderID(1);
         Inventory inventory = warehouse.getInventory();
-        Map<Integer,ProductStock> productStockList =  inventory.getProductStocks();
+        Map<Integer, ProductStock> productStockList =  inventory.getProductStocks();
 
         Cart cart = user.getCart();
         Map<Integer,Integer> productStockIDvsCount = cart.GetItemsInCart();

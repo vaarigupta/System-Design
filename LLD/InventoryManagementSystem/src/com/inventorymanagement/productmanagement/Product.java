@@ -1,4 +1,4 @@
-package com.inventorymanagement;
+package com.inventorymanagement.productmanagement;
 
 import com.inventorymanagement.enums.Brand;
 import com.inventorymanagement.enums.ProductCategory;

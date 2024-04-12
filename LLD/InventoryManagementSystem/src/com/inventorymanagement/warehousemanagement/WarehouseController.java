@@ -1,4 +1,6 @@
-package com.inventorymanagement;
+package com.inventorymanagement.warehousemanagement;
+
+import com.inventorymanagement.Address;
 
 import java.util.ArrayList;
 import java.util.List;

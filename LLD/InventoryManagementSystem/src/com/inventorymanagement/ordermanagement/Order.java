@@ -1,10 +1,11 @@
-package com.inventorymanagement;
+package com.inventorymanagement.ordermanagement;
 
+import com.inventorymanagement.Address;
+import com.inventorymanagement.usermanagement.User;
 import com.inventorymanagement.enums.OrderStatus;
-import com.inventorymanagement.enums.PaymentMode;
-import com.inventorymanagement.enums.PaymentStatus;
+import com.inventorymanagement.paymentmanagement.Payment;
+import com.inventorymanagement.warehousemanagement.Warehouse;
 
-import java.util.List;
 import java.util.Map;
 
 public class Order {

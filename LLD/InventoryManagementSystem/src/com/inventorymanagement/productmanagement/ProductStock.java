@@ -1,7 +1,4 @@
-package com.inventorymanagement;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.inventorymanagement.productmanagement;
 
 public class ProductStock {
 

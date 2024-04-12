@@ -1,8 +1,8 @@
-package com.inventorymanagement;
+package com.inventorymanagement.warehousemanagement;
 
-import java.util.ArrayList;
+import com.inventorymanagement.productmanagement.ProductStock;
+
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class Inventory {

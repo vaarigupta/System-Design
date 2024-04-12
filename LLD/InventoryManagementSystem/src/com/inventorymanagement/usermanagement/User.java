@@ -1,4 +1,7 @@
-package com.inventorymanagement;
+package com.inventorymanagement.usermanagement;
+
+import com.inventorymanagement.Address;
+import com.inventorymanagement.ordermanagement.Cart;
 
 import java.util.ArrayList;
 import java.util.List;

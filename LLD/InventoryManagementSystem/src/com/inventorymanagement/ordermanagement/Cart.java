@@ -1,4 +1,7 @@
-package com.inventorymanagement;
+package com.inventorymanagement.ordermanagement;
+
+import com.inventorymanagement.warehousemanagement.Inventory;
+import com.inventorymanagement.productmanagement.ProductStock;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,7 +16,7 @@ public class Cart {
         productStockIDvsCount = new HashMap<Integer, Integer>();
     }
 
-    void AddItemToCart(int productStockID, int productCount)
+    public void AddItemToCart(int productStockID, int productCount)
     {
         if(productStockIDvsCount.containsKey(productStockID))
         {
@@ -25,7 +28,7 @@ public class Cart {
             productStockIDvsCount.put(productStockID,productCount);
         }
     }
-    void RemoveItemFromCart(int productStockID, int productCount){
+    public void RemoveItemFromCart(int productStockID, int productCount){
         if(productStockIDvsCount.containsKey(productStockID))
         {
             int updatedProductCount = productStockIDvsCount.get(productStockID) - productCount;
@@ -46,7 +49,7 @@ public class Cart {
 
     public float CalculateCartAmount(Inventory inventory)
     {
-        Map<Integer,ProductStock> productStockMap =  inventory.getProductStocks();
+        Map<Integer, ProductStock> productStockMap =  inventory.getProductStocks();
         float totalAmount = 0;
 
         for(Map.Entry<Integer,Integer> entry : productStockIDvsCount.entrySet())

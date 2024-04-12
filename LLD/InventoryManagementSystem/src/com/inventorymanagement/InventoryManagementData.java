@@ -4,6 +4,14 @@ import com.inventorymanagement.enums.Brand;
 import com.inventorymanagement.enums.City;
 import com.inventorymanagement.enums.ProductCategory;
 import com.inventorymanagement.enums.State;
+import com.inventorymanagement.productmanagement.Product;
+import com.inventorymanagement.productmanagement.ProductFactory;
+import com.inventorymanagement.productmanagement.ProductStock;
+import com.inventorymanagement.usermanagement.User;
+import com.inventorymanagement.usermanagement.UserController;
+import com.inventorymanagement.warehousemanagement.Inventory;
+import com.inventorymanagement.warehousemanagement.Warehouse;
+import com.inventorymanagement.warehousemanagement.WarehouseController;
 
 import java.util.ArrayList;
 import java.util.List;

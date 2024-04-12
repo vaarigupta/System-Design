@@ -1,9 +1,10 @@
-package com.inventorymanagement;
+package com.inventorymanagement.productmanagement;
 
 import com.inventorymanagement.enums.Brand;
 import com.inventorymanagement.enums.ProductCategory;
+import com.inventorymanagement.productmanagement.Product;
 
-public class OilGheeProduct extends Product{
+public class OilGheeProduct extends Product {
 
     public OilGheeProduct(int productID, Brand brand) {
         super(productID);

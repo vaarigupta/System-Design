@@ -1,4 +1,5 @@
-package com.inventorymanagement;
+package com.inventorymanagement.ordermanagement;
+
 
 
 import java.util.List;

@@ -1,4 +1,5 @@
-package com.inventorymanagement;
+package com.inventorymanagement.usermanagement;
+
 
 import java.util.ArrayList;
 import java.util.List;

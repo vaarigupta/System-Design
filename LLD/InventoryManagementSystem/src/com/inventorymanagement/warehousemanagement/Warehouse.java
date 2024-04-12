@@ -1,4 +1,6 @@
-package com.inventorymanagement;
+package com.inventorymanagement.warehousemanagement;
+
+import com.inventorymanagement.Address;
 
 public class Warehouse {
 

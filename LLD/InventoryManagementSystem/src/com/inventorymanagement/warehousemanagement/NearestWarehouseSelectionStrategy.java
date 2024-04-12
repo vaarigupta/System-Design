@@ -1,8 +1,12 @@
-package com.inventorymanagement;
+package com.inventorymanagement.warehousemanagement;
+
+import com.inventorymanagement.Address;
+import com.inventorymanagement.warehousemanagement.Warehouse;
+import com.inventorymanagement.warehousemanagement.WarehouseSelectionStrategy;
 
 import java.util.List;
 
-public class NearestWarehouseSelectionStrategy implements  WarehouseSelectionStrategy {
+public class NearestWarehouseSelectionStrategy implements WarehouseSelectionStrategy {
 
     @Override
     public Warehouse FindWarehouse(List<Warehouse> warehouseList, Address deliveryAddress) {
