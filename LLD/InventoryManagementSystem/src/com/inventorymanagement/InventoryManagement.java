@@ -64,10 +64,10 @@ public class InventoryManagement {
        UserController userController = inventoryManagement.getUserController();
 
         List<User> userList =  inventoryManagementData.CreateUser();
-
         List<Address> addressList = inventoryManagementData.CreateAddresses();
 
-       warehouseController.setWarehouseList(inventoryManagementData.CreateWarehouse());
+        warehouseController.setWarehouseList(inventoryManagementData.CreateWarehouse());
+        userController.setUserList(userList);
 
         User user = userList.get(0);
 
@@ -93,6 +93,7 @@ public class InventoryManagement {
         Order order =  inventoryManagement.CreateOrder(user,deliveryAddress,warehouse,PaymentMode.CASH_ON_DELIVERY);
 
         System.out.println("Finally 1 order fulfilled");
+
     }
 
     public Order CreateOrder(User user, Address deliveryAddress, Warehouse warehouse, PaymentMode paymentMode)

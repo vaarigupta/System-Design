@@ -78,7 +78,7 @@ public class ParkingLot {
         Ticket ticket1 =  parkingLot.VehicleIn(entranceGate,vehicle1);
         Ticket ticket2 =  parkingLot.VehicleIn(entranceGate,vehicle2);
         Ticket ticket5 = parkingLot.VehicleIn(entranceGate,vehicle5);
-      Ticket ticket3 = parkingLot.VehicleIn(entranceGate,vehicle3);
+        Ticket ticket3 = parkingLot.VehicleIn(entranceGate,vehicle3);
         Ticket ticket4 = parkingLot.VehicleIn(entranceGate,vehicle4);
 
         //1 Vehicle out from the exit gate

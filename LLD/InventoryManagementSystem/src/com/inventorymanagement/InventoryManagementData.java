@@ -105,9 +105,9 @@ public class InventoryManagementData {
         addressList.get(0).setCity(City.GHAZIABAD);
         addressList.get(0).setPincode(201017);
         addressList.get(1).setCity(City.NOIDA);
-        addressList.get(0).setPincode(201303);
+        addressList.get(1).setPincode(201303);
         addressList.get(2).setCity(City.KANPUR);
-        addressList.get(0).setPincode(208001);
+        addressList.get(2).setPincode(208001);
         return  addressList;
     }
 
